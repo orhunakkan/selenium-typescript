@@ -1,0 +1,22 @@
+{
+  "name": "selenium-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Orhun Akkan",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/selenium-webdriver": "^4.1.27",
+    "axios": "^1.7.7",
+    "chromedriver": "^130.0.2",
+    "edgedriver": "^6.1.0",
+    "geckodriver": "^5.0.0",
+    "selenium-webdriver": "^4.26.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}
