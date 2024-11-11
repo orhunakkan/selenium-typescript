@@ -1,14 +1,15 @@
 import {afterAll, beforeAll, describe, expect, it} from 'vitest';
 import {WebDriver} from 'selenium-webdriver';
 import {getDriver} from "../utilities/sampleUtility";
-
-const baseURL = 'https://formy-project.herokuapp.com/';
+import {SamplePage} from "../pages/samplePage";
 
 describe('Formy Complete Web Form', () => {
     let driver: WebDriver;
+    let samplePage: SamplePage;
 
     beforeAll(async () => {
-        driver = await getDriver()
+        driver = await getDriver();
+        samplePage = new SamplePage(driver);
     });
 
     afterAll(async () => {
@@ -16,16 +17,16 @@ describe('Formy Complete Web Form', () => {
     });
 
     it('Submit Webform and Validate', async () => {
-        await driver.get(`${baseURL}form`);
-        await driver.findElement({id: 'first-name'}).sendKeys('John');
-        await driver.findElement({id: 'last-name'}).sendKeys('Doe');
-        await driver.findElement({id: 'job-title'}).sendKeys('QA Engineer');
-        await driver.findElement({id: 'radio-button-2'}).click();
-        await driver.findElement({id: 'checkbox-1'}).click();
-        await driver.findElement({css: 'option[value="1"]'}).click();
-        await driver.findElement({id: 'datepicker'}).sendKeys('01/01/2022');
-        await driver.findElement({css: '.btn.btn-lg.btn-primary'}).click();
-        const successMessage = await driver.findElement({css: '.alert.alert-success'}).getText();
+        await driver.get(`${samplePage.url}form`);
+        await driver.findElement(samplePage.firstNameInput).sendKeys('John');
+        await driver.findElement(samplePage.lastNameInput).sendKeys('Doe');
+        await driver.findElement(samplePage.jobTitleInput).sendKeys('QA Engineer');
+        await driver.findElement(samplePage.radioButton).click();
+        await driver.findElement(samplePage.checkbox).click();
+        await driver.findElement(samplePage.dropdownOption).click();
+        await driver.findElement(samplePage.datepicker).sendKeys('01/01/2022');
+        await driver.findElement(samplePage.submitButton).click();
+        const successMessage = await driver.findElement(samplePage.successMessage).getText();
         expect(successMessage).toContain('The form was successfully submitted!');
     });
 });

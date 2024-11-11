@@ -1,37 +1,31 @@
-# Selenium TypeScript Framework (WIP)
+# Project Overview
 
-This repository contains a Selenium-based testing framework written in TypeScript. The goal of this project is to provide a robust and scalable solution for end-to-end testing of web applications.
+## Prerequisites
 
-## Project Structure
+## Installation
 
-- **`sampleAPI.spec.ts`**: Placeholder for API test specifications.
-- **`samplePage.ts`**: Placeholder for page object model definitions.
-- **`samplePayload.json`**: Placeholder for sample payloads used in tests.
-- **`sampleUI.spec.ts`**: Placeholder for UI test specifications.
-- **`sampleUtility.ts`**: Placeholder for utility functions used across tests.
+## Folder Structure
 
-## Getting Started
+## Configuration
 
-### Prerequisites
+## Running Tests
 
-- Node.js
-- npm
+## Mobile and Desktop Test Architecture
 
-### Installation
+## Writing Tests
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/selenium-typescript-framework.git
-    cd selenium-typescript-framework
-    ```
+## Environment Management
 
-2. Install dependencies:
-    ```sh
-    npm install
-    ```
+## Running Tests in CI/CD
 
-### Running Tests
+## Snapshot and Visual Regression Testing
 
-To run the tests, use the following command:
-```sh
-npm test
+## Error Handling and Debugging
+
+## Reporting
+
+## Troubleshooting
+
+## References
+
+## Contributing (Optional)
