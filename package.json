@@ -2,7 +2,9 @@
   "name": "selenium-typescript-framework",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "vitest"
+  },
   "author": "Orhun Akkan",
   "license": "ISC",
   "description": "",
