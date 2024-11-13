@@ -18,5 +18,8 @@ jobs:
           node-version: 'lts/*'
       - name: Install dependencies
         run: npm install
-      - name: Run tests
-        run: npm test -- --config vitest.config.ts
+      - name: Run individual tests
+        run: |
+          for testfile in $(find tests -name "*.spec.ts"); do
+            npx vitest run $testfile --config vitest.config.ts || exit 1
+          done

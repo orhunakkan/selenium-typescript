@@ -1,10 +1,9 @@
 {
   "name": "selenium-typescript-framework",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
-  "scripts": {
-    "test": "vitest"
-  },
+  "scripts": {},
   "author": "Orhun Akkan",
   "license": "ISC",
   "description": "",
@@ -20,7 +19,6 @@
     "sqlite3": "^5.1.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
-    "vitest": "^2.1.4",
-    "vite": "^5.4.11"
+    "vitest": "^2.1.4"
   }
 }
